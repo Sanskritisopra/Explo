@@ -1,0 +1,139 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.box{
+  border: 4px solid grey;
+
+}
+
+.tabs{
+  display: flex;
+  justify-content: space-between; 
+  margin-bottom: 30px;
+}
+
+.tab{
+  background-color: #ccc;
+  flex: 1;
+  padding: 10px;
+  text-align: center;
+  border: 1px solid grey;
+  border-top:none;
+  cursor:pointer;
+  position: relative;
+}
+
+.active-tab{
+  border: none;
+  background-color: #fff;
+}
+
+.active-tab::after{
+  border-top: 2px solid grey;
+  content: '';
+  position: absolute;
+  top:0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  background: initial;
+  animation: new 0.5s;
+}
+
+@keyframes new{
+  from{
+    top:50px;
+    left: 0;
+    right: 0;
+    background: grey;
+  }
+
+  to{
+    top:0px;
+    left: 0;
+    right: 0;
+    border-top: 2px solid grey;
+  }
+}
+
+
+
+.contents{
+  position: relative;
+  padding: 30px;
+
+}
+
+.content{
+  display: none;
+  position: relative;
+}
+
+.active-content{
+  display: block;
+  margin-left: 10px;
+  margin-right: 10px;
+  transition: all 1s ease-in-out;
+  animation: example 0.3s;
+}
+
+@keyframes example{
+  from{
+   margin: 0;
+  }
+
+  to{
+    margin-left: 10px;
+  }
+}
+
+
+
+
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 20px;
+}
+i{
+  font-size: 30px;
+  cursor: pointer;
+  transform: translate(-50%, -50%);
+}
+
+form {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.navbar {
+  height: 55px;
+}
+
+.namaste{
+  margin: auto;
+}
